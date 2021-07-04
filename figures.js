@@ -100,8 +100,8 @@ function calcularAreaCuadrado(){
     const input = document.getElementById("InputCuadrado")
     const value = input.value;
     const area = areaCuadrado(value);
+    document.getElementById('result').innerHTML = area;
     
-    alert(area);
 }
 
 //Triángulo
