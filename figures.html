@@ -51,14 +51,25 @@
         <h2>Calcula el área y perimetro de un circulo</h2>
         <form>
             <label for="InputCirculo"></label>
-            <input id="InputCuadrado" type="number"/>
-            <button type="button" onclick="calcularPerimetroCuadrado()">
+            <input id="InputCirculo" type="number"/>
+            <button type="button" onclick="calcularPerimetroCirculo()">
                 Calcular perímetro
             </button>
-            <button type="button" onclick="calcularAreaCuadrado()">
-                Calcular el área
+            <button type="button" onclick="calcularAreaCirculo()">
+                Calcular área
+            </button>
+            <button type="button" onclick="calcularDiametroCirculo()">
+                Calcular diametro
             </button>
         </form>
+    </section>
+    <section>
+        <h1>
+            Resultado:
+        </h1>
+        <p>
+            El resultado de tu operacion es: <div id='result'></div>
+        </p>
     </section>
     <script src="./figures.js"></script>
 </body>
