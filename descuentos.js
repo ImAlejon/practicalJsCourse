@@ -35,17 +35,21 @@ function onClickButtonPriceDiscount(){
     resultP.innerText = `El precio con con descuento son: $${precioConDescuento}`;
 };
 
-function recognizeCupons(){
-    const value = document.getElementById('cupons').value;
+function recognizeCoupons(){
+    const couponValue = document.getElementById('cupons').value;
     const resultC = document.getElementById('resultC');
-    for (let i = 0; i < coupons.length; i++) {
-        const comparison = coupons[i].couponName == value
-        if(comparison){
-            resultC.innerText = 
-            `¡Tu cupón es valido!, tienes un ${coupons[i].discount}% de descuento`
-        }else if(!comparison){
-            resultC.innerText =
-            `¡Tu cupón no es valido!`
-        }
+
+    if(couponValue == coupons[0].couponName){
+        resultC.innerText = 
+        `Tu cupón tiene un descuento de ${coupons[0].discount}%`;
+    } else if(couponValue == coupons[1].couponName){
+        resultC.innerText = 
+        `Tu cupón tiene un descuento de ${coupons[1].discount}%`;
+    } else if(couponValue == coupons[2].couponName){
+        resultC.innerText = 
+        `Tu cupón tiene un descuento de ${coupons[2].discount}%`;
+    }else{
+        resultC.innerText = 
+        `Tu cupón  "${couponValue}"  no tiene ningún tipo de descuento`
     }
-}
+};
