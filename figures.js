@@ -55,7 +55,9 @@ function alturaTriangulo(ladoUno, ladoDos, base){
     const partOne = a * b;
     const height = partOne / h;
     return height;
+    console.log(data,h,a,b);
 }
+console.log(alturaTriangulo(1,2,3));
 console.groupEnd();
 
 // Código del circulo
