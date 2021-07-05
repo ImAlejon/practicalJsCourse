@@ -79,7 +79,7 @@ function perimetroCirculo(radio){
 
 //Área
 function areaCirculo(radio){
-    return (radio * radio) * PI1;
+    return (radio * radio) * PI;
 }
 
 console.groupEnd();
@@ -93,14 +93,14 @@ function calcularPerimetroCuadrado(){
     const value = input.value;
     const perimetro = perimetroCuadrado(value);
 
-    document.getElementById('result').innerHTML = perimetro;
+    document.getElementById('result').innerText = perimetro;
 }
 
 function calcularAreaCuadrado(){
     const input = document.getElementById("InputCuadrado")
     const value = input.value;
     const area = areaCuadrado(value);
-    document.getElementById('result').innerHTML = area;
+    document.getElementById('result').innerText = area;
     
 }
 
@@ -111,7 +111,7 @@ function calcularPerimetroTriangulo(){
     const sideTwo = document.getElementById('InputTrianguloLadoDos').value;
     const base = document.getElementById('InputTrianguloBase').value;
     const result = perimetroTriangulo(sideOne, sideTwo, base);
-    document.getElementById('result').innerHTML = result;
+    document.getElementById('result').innerText = result;
 }
  
 function calcularAreaTriangulo(){
@@ -120,7 +120,7 @@ function calcularAreaTriangulo(){
     const base = document.getElementById('InputTrianguloBase').value;
     const height = alturaTriangulo(sideOne, sideTwo, base);
     const area = areaTriangulo(base, height);
-    document.getElementById('result').innerHTML = area;
+    document.getElementById('result').innerText = area;
 
 }
 
@@ -129,18 +129,18 @@ function calcularAreaTriangulo(){
 function calcularPerimetroCirculo(){
     const radio = document.getElementById('InputCirculo').value;
     const perimeter = perimetroCirculo(radio);
-    document.getElementById('result').innerHTML = perimeter;
+    document.getElementById('result').innerText = perimeter;
 }
 
 function calcularAreaCirculo(){
     const radio = document.getElementById('InputCirculo').value;
     const area = areaCirculo(radio);
-    document.getElementById('result').innerHTML = area;
+    document.getElementById('result').innerText = area;
 }
 
 function calcularDiametroCirculo(){
     const radio = document.getElementById('InputCirculo').value;
     const diameter = diametroCirculo(radio);
-    document.getElementById('result').innerHTML = diameter;
+    document.getElementById('result').innerText = diameter;
     
 }
