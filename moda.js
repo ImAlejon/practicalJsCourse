@@ -1,33 +1,9 @@
-const lista1 = [
-    1,
-    2,
-    3,
-    1,
-    2,
-    3,
-    4,
-    2,
-    2,
-    1,
-    3,
-];
+function getTrend(arr){
+    const arrObj = {};
+    arr.map((elemento) => {(arrObj[elemento]) ? arrObj[elemento] += 1 : arrObj[elemento] = 1;});
+    const result = Object.entries(arrObj).sort((a, b) => a[1] - b[1]);
+    const trend = result[result.length - 1];
+    return trend;
+}
 
-const lista1Count = {};
-
-lista1.map(
-    function(elemento) {
-        if(lista1Count[elemento]){
-            lista1Count[elemento] += 1;
-        } else {
-            lista1Count[elemento] = 1;
-        }
-    }
-);
-
-const lista1Arr = Object.entries(lista1Count).sort(
-    function (valorAcumulado, nuevoValor) {
-        return valorAcumulado[1] - nuevoValor[1];
-    }
-);
-
-const moda = lista1Arr[lista1Arr.length - 1];
+//const array = [1,2,1,1,1,5,6,8,5,5,5,5,5,5,5]; example array, try it!
