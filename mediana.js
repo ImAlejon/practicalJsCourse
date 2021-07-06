@@ -20,14 +20,9 @@ function isPair(numerito){
     }
 }
 
-function compareNumbers(a, b) {
-    return a - b;
-}
-
 function sortArray(){
     numbers.join();
     numbers.sort();
-    numbers.sort(compareNumbers);
 }
 
 sortArray(numbers);
