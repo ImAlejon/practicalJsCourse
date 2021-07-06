@@ -17,8 +17,10 @@ const lista1Count = {};
 lista1.map(
     function(elemento) {
         if(lista1Count[elemento]){
+            console.log(lista1Count[elemento])
             lista1Count[elemento] += 1;
         } else {
+            console.log(lista1Count[elemento])
             lista1Count[elemento] = 1;
         }
     }
