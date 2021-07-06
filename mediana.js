@@ -1,3 +1,7 @@
+let mediana;
+const numbers = [3,2,4];
+const halfOfTheArray = parseInt(numbers.length / 2);
+
 function calcularMediaAritmetica(lista){
     const sumaLista = lista.reduce(
         function (valorAcumulado = 0, nuevoElemento){
@@ -8,16 +12,7 @@ function calcularMediaAritmetica(lista){
     return promedioLista 
 }
 
-const lista1 = [
-    100,
-    200,
-    500,
-    400000000,
-];
-
-const mitadLista1 = parseInt(lista1.length / 2);
-
-function esPar(numerito){
+function isPair(numerito){
     if(numerito % 2 === 0){
         return true;
     } else {
@@ -25,20 +20,27 @@ function esPar(numerito){
     }
 }
 
-let mediana;
+function compareNumbers(a, b) {
+    return a - b;
+}
 
-if(esPar(lista1.length)) {
-    const elemento1 = lista1[mitadLista1 - 1];
-    const elemento2 = lista1[mitadLista1];
+function sortArray(){
+    numbers.join();
+    numbers.sort();
+    numbers.sort(compareNumbers);
+}
 
-    const promedioElemento1y2 = calcularMediaAritmetica(
-        [
-            elemento1,
-            elemento2
-        ]
-        )
-    
+sortArray(numbers);
+console.log(mediana)
+if(isPair(numbers.length)){
+
+    const elemento1 = numbers[halfOfTheArray - 1];
+    const elemento2 = numbers[halfOfTheArray];
+    const promedioElemento1y2 = calcularMediaAritmetica([elemento1,elemento2]);
     mediana = promedioElemento1y2;
+
 } else {
-    mediana = lista1[mitadLista1]
+
+    mediana = numbers[halfOfTheArray];
+
 }
