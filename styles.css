@@ -1,0 +1,78 @@
+:root{
+    --headerFooterColor: rgb(0, 0, 0);
+    --fontColor: rgb(255, 255, 255);
+    --mainTextColor: black;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* Header */
+
+.main-header{
+    background-color: var(--headerFooterColor);
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-header .main-header-nav-bar{
+    background-color: var(--headerFooterColor);
+    display: inline-block;
+}
+
+.main-header .main-header-ancle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--fontColor);
+    padding-left: 4rem;
+}
+.main-header .main-header-home-btn{
+    max-width: 3rem;
+}
+/* Header */
+
+/* main */
+main{
+    font-size: 2rem;
+}
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: var(--mainTextColor);
+    padding-left: 4rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+/* main */
+
+/* Footer */
+.main-footer{
+    background-color: var(--headerFooterColor);
+    position: fixed;
+    padding: 2rem 2rem 2rem 2rem;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.main-footer-ancle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--fontColor);
+    padding-left: 4rem;
+}
+/* Footer */

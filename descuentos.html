@@ -5,16 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porcentajes y Descuentos | Curso Práctico de JS</title>
-    <style src="./descuentos.css"></style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        
-    <h1>
-        Porcentajes y Descuentos
-    </h1>
-    <p>Este es el segundo taller del curso práctico de javascript</p>
+    <!-- Header -->
+    <header class='main-header'>
+        <ul>
+          <li class="main-header-nav-bar">
+            <a href="./index.html" class="main-header-ancle">
+              <img class="main-header-home-btn"
+              src="data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIuMDAzIDUxMi4wMDMiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyLjAwMyA1MTIuMDAzIiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnPjxnPjxwYXRoIGQ9Im0xODIuNDEgMTAzLjM1IDE5MS4zLTk0LjU5NmM3LjkzMS0zLjkyMiAxNy4yMjIgMS44NDkgMTcuMjIyIDEwLjY5NnYzNDIuODZjMCAxMS4zMDktNS45NTggMjEuNzgyLTE1LjY3OSAyNy41NjFsLTE3OC41NyAxMDYuMTQ4Yy02LjI5NiAzLjc0My0xNC4yNzEtLjc5NS0xNC4yNzEtOC4xMTl2LTM4NC41NXoiIGZpbGw9IiM4YmIzZWEiLz48cGF0aCBkPSJtMzczLjcxIDguNzU0LTE5LjQwNiA5LjU5NmMzLjQ4NCAyLjAxOCA1Ljk2MSA1Ljc1OSA1Ljk2MSAxMC4zMjR2MzMzLjYzNmMwIDExLjMwOS01Ljk1OCAyMS43ODItMTUuNjc5IDI3LjU2MWwtMTYyLjE3NiA5Ni40MDJ2MS42MjdjMCA3LjMyNCA3Ljk3NSAxMS44NjEgMTQuMjcxIDguMTE5bDE3OC41Ny0xMDYuMTQ4YzkuNzIxLTUuNzc5IDE1LjY3OS0xNi4yNTIgMTUuNjc5LTI3LjU2MXYtMzQyLjg2Yy4wMDEtOC44NDctOS4yOS0xNC42MTgtMTcuMjItMTAuNjk2eiIgZmlsbD0iIzczOWFkNiIvPjxwYXRoIGQ9Im0xODIuNDEgMTAzLjM1aDI3Ni4wM2M5Ljc0NCAwIDE3LjY0MyA3Ljg5OSAxNy42NDMgMTcuNjQzdjM2NS44NjZjMCA5Ljc0NC03Ljg5OSAxNy42NDMtMTcuNjQzIDE3LjY0M2gtMjY2LjU4NWMtNS4yMTYgMC05LjQ0NS00LjIyOS05LjQ0NS05LjQ0NXoiIGZpbGw9IiNlZGY0ZmYiLz48cGF0aCBkPSJtNDU4LjQ0IDEwMy4zNWgtMzAuNjY3YzkuNzQ0IDAgMTcuNjQzIDcuODk5IDE3LjY0MyAxNy42NDN2MzY1Ljg2NmMwIDkuNzQ0LTcuODk5IDE3LjY0My0xNy42NDMgMTcuNjQzaDMwLjY2N2M5Ljc0NCAwIDE3LjY0My03Ljg5OSAxNy42NDMtMTcuNjQzdi0zNjUuODY2YzAtOS43NDQtNy44OTktMTcuNjQzLTE3LjY0My0xNy42NDN6IiBmaWxsPSIjZGJlYWZmIi8+PHBhdGggZD0ibTQ2LjMwOCAyNzIuNTAxaDExMy44OTFsLTMzLjU5MyAzMy41OTNjLTQuMDU3IDQuMDU3LTQuMDU3IDEwLjYzNSAwIDE0LjY5Mmw4LjY0MyA4LjY0M2M0LjA1NyA0LjA1NyAxMC42MzUgNC4wNTcgMTQuNjkyIDBsNjEuNTYyLTYxLjU2MmMxLjc1OC0xLjc1OCAzLjE4OS0zLjg0MiA0LjAzMS02LjE4MSAyLjI0NS02LjIzOC41OTQtMTIuOTIzLTMuODM0LTE3LjM1MWwtNjEuNzU5LTYxLjc1OWMtNC4wNTctNC4wNTctMTAuNjM1LTQuMDU3LTE0LjY5MiAwbC04LjY0MiA4LjY0M2MtNC4wNTcgNC4wNTctNC4wNTcgMTAuNjM1IDAgMTQuNjkybDMzLjU5MiAzMy41OTFoLTExMy44OTFjLTUuNzM4IDAtMTAuMzg5IDQuNjUxLTEwLjM4OSAxMC4zODl2MTIuMjIzYzAgNS43MzYgNC42NTEgMTAuMzg3IDEwLjM4OSAxMC4zODd6IiBmaWxsPSIjZmY4MDg2Ii8+PHBhdGggZD0ibTIxMS42OTkgMjQ0LjMzNS02MS43NTktNjEuNzU5Yy00LjA1Ny00LjA1Ny0xMC42MzUtNC4wNTctMTQuNjkyIDBsLTcuMTUxIDcuMTUxYzIuOTQyLS4yNDcgNS45NjguNzUgOC4yMTkgMy4wMDFsNTEuNzE2IDUxLjYwNmM0LjQyOCA0LjQyOCA2LjA3OSAxMS4xMTMgMy44MzQgMTcuMzUxLS44NDIgMi4zMzktMi4yNzMgNC40MjMtNC4wMzEgNi4xODFsLTQ5LjQ4MyA0OS4zNjZjLTMuNzM0IDMuNzM0LTkuNiA0LjAyMi0xMy42NzQuODgxLjQ4NS45NjMgMS4xMjMgMS44NjggMS45MjcgMi42NzJsOC42NDMgOC42NDNjNC4wNTcgNC4wNTcgMTAuNjM1IDQuMDU3IDE0LjY5MiAwbDYxLjU2Mi02MS41NjJjMS43NTgtMS43NTggMy4xODktMy44NDIgNC4wMzEtNi4xODEgMi4yNDYtNi4yMzcuNTk1LTEyLjkyMi0zLjgzNC0xNy4zNXoiIGZpbGw9IiNlNTY0NmUiLz48L2c+PGc+PHBhdGggZD0ibTQ3Ni4wODMgMTkwLjA1Yy00LjE0MiAwLTcuNSAzLjM1OC03LjUgNy41djI4OS4zMDljMCA1LjU5My00LjU1IDEwLjE0NC0xMC4xNDMgMTAuMTQ0aC0yNjYuNTg1Yy0xLjA3MiAwLTEuOTQ1LS44NzMtMS45NDUtMS45NDUgMC0xLjI5NC4wMDMtMTU2LjQ0Mi4wMDMtMTU2LjQ0MiAwLTQuMTQyLTMuMzU4LTcuNS03LjUtNy41cy03LjUgMy4zNTgtNy41IDcuNWMwIDAtLjAwMyAxNTUuMTQ1LS4wMDMgMTU2LjQ0MiAwIDkuMzQ0IDcuNjAyIDE2Ljk0NSAxNi45NDUgMTYuOTQ1aDI2Ni41ODVjMTMuODY0IDAgMjUuMTQzLTExLjI3OSAyNS4xNDMtMjUuMTQ0di0yODkuMzA5YzAtNC4xNDItMy4zNTgtNy41LTcuNS03LjV6Ii8+PHBhdGggZD0ibTQ1OC40NCA5NS44NWgtNjAuMDA3di03Ni4zOThjMC02Ljc2OC0zLjQzMi0xMi45MzktOS4xNzktMTYuNTEtNS43NDctMy41Ny0xMi43OTktMy45MTItMTguODY2LS45MTNsLTE5MS4zIDk0LjU5OWMtLjE2Ny4xNDYtNC4xMjQgMS45MTktNC4xNzUgNi43Nzl2OTMuNTM1bC0xOS42Ny0xOS42N2MtNi45NzUtNi45NzYtMTguMzI0LTYuOTc1LTI1LjI5OSAwbC04LjY0MiA4LjY0M2MtNi45NzUgNi45NzUtNi45NzUgMTguMzI0IDAgMjUuMjk4bDIwLjc4OCAyMC43ODhoLTk1Ljc4MmMtOS44NjQgMC0xNy44ODkgOC4wMjUtMTcuODg5IDE3Ljg4OXYxMi4yMjNjMCA5Ljg2NCA4LjAyNSAxNy44ODkgMTcuODg5IDE3Ljg4OWg5NS43ODRsLTIwLjc5IDIwLjc5Yy0zLjM3OCAzLjM3OS01LjIzOSA3Ljg3MS01LjIzOSAxMi42NDkgMCA0Ljc3OSAxLjg2MSA5LjI3MSA1LjI0IDEyLjY0OWw4LjY0MyA4LjY0NGMzLjQ4OCAzLjQ4NyA4LjA2OCA1LjIzIDEyLjY0OSA1LjIzczkuMTYyLTEuNzQzIDEyLjY0OS01LjIzbDYxLjU2My02MS41NjNjMi42NTgtMi42NTkgNC42MDQtNS42NjggNS43ODQtOC45NDQgMy4xNTItOC43NTguOTU5LTE4LjY0OC01LjU4Ny0yNS4xOTRsLTI3LjA4OS0yNy4wODl2LTEwMS4wOTRoMjY4LjUyNWM1LjU5MyAwIDEwLjE0MyA0LjU1IDEwLjE0MyAxMC4xNDN2NDAuMzQ5YzAgNC4xNDIgMy4zNTggNy41IDcuNSA3LjVzNy41LTMuMzU4IDcuNS03LjV2LTQwLjM0OWMwLTEzLjg2NC0xMS4yNzktMjUuMTQzLTI1LjE0My0yNS4xNDN6bS0yNDkuOTYzIDE2My4yOTVjLS40MiAxLjE2Ni0xLjIwOCAyLjM0OC0yLjI3OCAzLjQxOWwtNjEuNTYyIDYxLjU2MmMtMS4xMjcgMS4xMjctMi45NiAxLjEyNi00LjA4NiAwbC04LjY0My04LjY0NGMtMS4xMjYtMS4xMjYtMS4xMjYtMi45NTggMC00LjA4NWwzMy41OTMtMzMuNTkzYzIuMTQ1LTIuMTQ1IDIuNzg3LTUuMzcxIDEuNjI2LTguMTczLTEuMTYxLTIuODAzLTMuODk2LTQuNjMtNi45MjktNC42M2gtMTEzLjg5Yy0xLjU5MyAwLTIuODg5LTEuMjk2LTIuODg5LTIuODg5di0xMi4yMjJjMC0xLjU5MyAxLjI5Ni0yLjg4OSAyLjg4OS0yLjg4OWgxMTMuODljMy4wMzQgMCA1Ljc2OC0xLjgyNyA2LjkyOS00LjYzcy41MTktNi4wMjgtMS42MjYtOC4xNzNsLTMzLjU5Mi0zMy41OTFjLTEuMTI2LTEuMTI2LTEuMTI2LTIuOTU5IDAtNC4wODVsOC42NDItOC42NDNjMS4xMjctMS4xMjYgMi45NTktMS4xMjYgNC4wODYgMGw2MS43NTkgNjEuNzU5YzIuNDk2IDIuNDk2IDMuMjkzIDYuMTM5IDIuMDgxIDkuNTA3em0xNjguNTU5LTI0My42NjljMS45OTUtLjk4NSAzLjY3My0uMTgyIDQuMzAzLjIwOC42My4zOTEgMi4wOTQgMS41NDIgMi4wOTQgMy43Njh2NzYuMzk4aC0xNjguOTI4eiIvPjwvZz48L2c+PC9zdmc+"
+               alt="homeBtn">
+            </a>
+          </li>
+          <li class="main-header-nav-bar"><a href="./figures.html" class="main-header-ancle">Figuras</a></li>
+          <li class="main-header-nav-bar"><a href="./descuentos.html" class="main-header-ancle">Porcentajes y Descuentos</a></li>
+          <li class="main-header-nav-bar"><a href="./statistics.html" class="main-header-ancle">Promedio, media y mediana</a></li>
+          <li class="main-header-nav-bar"><a href="./salarios.html" class="main-header-ancle">Salarios</a></li>
+        </ul>
     </header>
+    <!-- /Header -->
+    <main>
+    <section> 
+    <h1>Porcentajes y Descuentos</h1>
+    <p>Este es el segundo taller del curso práctico de javascript</p>
+    </section>
     <section>
         <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
         <form>
@@ -41,6 +56,12 @@
         <button type="button" onclick="recognizeCoupons()">Submit</button>
         <p id="resultC"></p>
     </section>
+    </main>
     <script src="./descuentos.js"></script>
+    <!-- Footer -->
+    <footer class="main-footer">
+        
+    </footer>
+    <!-- Footer -->
 </body>
 </html>
