@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contacto</title>
-        <link rel="stylesheet" href="../styles/styles.css">
+        <title>Descuentos y Cupones</title>
+        <link rel="stylesheet" href="../styles/headerNFooter.css">
+        <link rel="stylesheet" href="../styles/discount.css">
     </head>
     <body>
       <!-- Header -->
@@ -27,10 +28,12 @@
       </header>
     <!-- /Header -->
     <main>
-    <section> 
-    <h1>Porcentajes y Descuentos</h1>
-    <p>Este es el segundo taller del curso práctico de javascript</p>
-    </section>
+    <h1>Descuentos y Cupones</h1>
+    <p class="explain-text">
+      Este proyecto es para implementar la formula de descuentos con cualquier dato y tipo de descuento. Además
+      experimente con cupones, para poder poner una palabra clave y de dijera que descuento tiene la misma. 
+      (si quieres prueba bienvenido en los cupones c:).
+    </p>
     <section>
         <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
         <form>
@@ -47,7 +50,6 @@
                 Calcular el precio del descuento
             </button>
             
-            <p id="resultP"></p>
         </form>
     </section>
     <section>
@@ -55,10 +57,14 @@
         <label for="cupons">Escribe tu cupón!</label>
         <input type="text" id="cupons">
         <button type="button" onclick="recognizeCoupons()">Submit</button>
-        <p id="resultC"></p>
+    </section>
+    <section class="result">
+      <h4 >El resultado del descuento es:</h4>
+      <p id="resultP"></p>
+      <p id="resultC"></p>
     </section>
     </main>
-    <script src="./descuentos.js"></script>
+    <script src="../js/descuentos.js"></script>
     <!-- Footer -->
     <footer class="main-footer">
         

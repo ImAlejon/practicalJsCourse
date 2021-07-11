@@ -1,0 +1,67 @@
+:root{
+    --headerFooterColor: #212529;
+    --fontColor: white;
+    --mainTextColor: white;
+    --hoverColor: #f2e2c8;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    overflow:hidden;    
+}
+/* Header */
+
+.main-header{
+    background-color: var(--headerFooterColor);
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-header .main-header-nav-bar{
+    background-color: var(--headerFooterColor);
+    display: inline-block;
+}
+
+.main-header .main-header-ancle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--fontColor);
+    padding-left: 4rem;
+}
+.main-header .main-header-home-btn{
+    max-width: 3rem;
+}
+.main-header .main-header-ancle:hover{
+    color:var(--hoverColor);
+}
+/* Header */
+
+/* Footer */
+.main-footer{
+    background-color: var(--headerFooterColor);
+    position: fixed;
+    padding: 2rem 2rem 2rem 2rem;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.main-footer-ancle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--fontColor);
+    padding-left: 4rem;
+}
+/* Footer */

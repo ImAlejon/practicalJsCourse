@@ -16,25 +16,18 @@ html{
 }
 body{
     background-color: cornsilk;
-    overflow:hidden;    
+    overflow: hidden;    
 }
+
 /* main */
 main{
     padding: 1rem 1rem 1rem 1rem;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 .explain-text{
     padding: 1rem 1rem;
-    font-size: 1.3rem;
-}
-.square{
-    padding-bottom: 1rem;
-}
-.triangle{
-    padding-bottom: 1rem;
-}
-.circle{
-    padding-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: bolder;
 }
 button{
     margin-top: 0.5rem;
@@ -49,10 +42,8 @@ button:hover{
     background-color: rgb(230, 230, 230);
     border: 0.1rem solid rgb(105, 105, 105);
 }
-.result-paragraph{
-    padding-top: 1rem;
-}
-#result{
+#resultP{
+    padding-top: 2rem;
     font-size: 6rem;
     text-align: center;
 }
