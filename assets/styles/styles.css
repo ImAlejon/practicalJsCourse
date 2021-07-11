@@ -1,0 +1,132 @@
+:root{
+    --headerFooterColor: #212529;
+    --fontColor: white;
+    --mainTextColor: white;
+    --hoverColor: #f2e2c8;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    overflow:hidden;    
+}
+/* Header */
+
+.main-header{
+    background-color: var(--headerFooterColor);
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-header .main-header-nav-bar{
+    background-color: var(--headerFooterColor);
+    display: inline-block;
+}
+
+.main-header .main-header-ancle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--fontColor);
+    padding-left: 4rem;
+}
+.main-header .main-header-home-btn{
+    max-width: 3rem;
+}
+.main-header .main-header-ancle:hover{
+    color:var(--hoverColor);
+}
+/* Header */
+
+/* main */
+.container {
+    position: relative;
+    text-align: center;
+    color: var(--mainTextColor);
+}
+
+.text{
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    font-size: 2rem;
+    padding-left: 4rem;
+    padding-top: 4rem;
+}
+
+button{
+    position: absolute;
+    top: 20rem;
+    left: 6rem;
+    background-color: #212529; 
+    border: none;
+    padding: 1.5rem 3.2rem;
+    font-size: 1.6rem;
+    transition-duration: 0.1s;
+}
+
+button:hover {
+    background-color: #40474e; 
+    border: 0.2rem solid #727272;
+    font-size: 1.6rem;
+}
+
+button a{
+    text-decoration: none;
+    color: var(--mainTextColor);
+}
+
+.button2{
+    left: 20rem;
+}
+
+.button3{
+    left: 37rem;
+}
+
+.button4{
+    left: 53.2rem;
+}
+
+#main-paragraph{
+    margin-top: 4rem;
+    text-align: left;
+}
+
+.main-img{
+    max-width: 100%;
+    max-height: 100;
+}
+
+button a:hover{
+    color:var(--hoverColor);
+}
+/* main */
+
+/* Footer */
+.main-footer{
+    background-color: var(--headerFooterColor);
+    position: fixed;
+    padding: 2rem 2rem 2rem 2rem;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.main-footer-ancle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--fontColor);
+    padding-left: 4rem;
+}
+/* Footer */

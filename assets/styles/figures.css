@@ -1,7 +1,8 @@
 :root{
-    --headerFooterColor: rgb(0, 0, 0);
-    --fontColor: rgb(255, 255, 255);
-    --mainTextColor: black;
+    --headerFooterColor: #212529;
+    --fontColor: white;
+    --mainTextColor: white;
+    --backgroundColor: #f8ebda;
 }
 *{
     box-sizing: border-box;
@@ -11,8 +12,12 @@
 
 html{
     font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
+body{
+    overflow: hidden;
+    background-color: var(--backgroundColor);    
+}
 /* Header */
 
 .main-header{
@@ -43,19 +48,39 @@ html{
 
 /* main */
 main{
-    font-size: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 1rem;
 }
-.text{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    color: var(--mainTextColor);
-    padding-left: 4rem;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.explain-text{
+    padding: 1rem 1rem;
+    font-size: 1.3rem;
+}
+.square{
+    padding-bottom: 1rem;
+}
+.triangle{
+    padding-bottom: 1rem;
+}
+.circle{
+    padding-bottom: 1rem;
+}
+button{
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    border: 0.1rem solid black;
+}
+button:hover{
+    background-color: rgb(230, 230, 230);
+    border: 0.1rem solid rgb(105, 105, 105);
+}
+.result-paragraph{
+    padding-top: 1rem;
+}
+#result{
+    font-size: 6rem;
+    text-align: center;
 }
 /* main */
 

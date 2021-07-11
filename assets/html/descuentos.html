@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contacto</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="../styles/styles.css">
     </head>
     <body>
       <!-- Header -->
@@ -25,18 +25,44 @@
           <li class="main-header-nav-bar"><a href="./salarios.html" class="main-header-ancle">Salarios</a></li>
         </ul>
       </header>
-      <!-- /Header -->
-      
-      <!-- main -->
-      <main>
-       <p class="text">Mi correo de conctacto es: alejon2524@gmail.com</p>
-      </main>
-      <!-- main -->
-      
-      <!-- Footer -->
-      <footer class="main-footer">
+    <!-- /Header -->
+    <main>
+    <section> 
+    <h1>Porcentajes y Descuentos</h1>
+    <p>Este es el segundo taller del curso práctico de javascript</p>
+    </section>
+    <section>
+        <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
+        <form>
+            <label for="inputPrice">
+            Escribe el precio de tu producto:
+            </label>
+            <input type="number" id="inputPrice"/>
+
+            <label for="inputDiscount">
+                Escribe el descuento de tu producto:
+            </label>
+            <input type="number" id="inputDiscount"/>
+            <button type="button" onclick="onClickButtonPriceDiscount()">
+                Calcular el precio del descuento
+            </button>
+            
+            <p id="resultP"></p>
+        </form>
+    </section>
+    <section>
+        <h3>Cupones!</h3>
+        <label for="cupons">Escribe tu cupón!</label>
+        <input type="text" id="cupons">
+        <button type="button" onclick="recognizeCoupons()">Submit</button>
+        <p id="resultC"></p>
+    </section>
+    </main>
+    <script src="./descuentos.js"></script>
+    <!-- Footer -->
+    <footer class="main-footer">
         
-      </footer>
-      <!-- Footer -->
-    </body>
+    </footer>
+    <!-- Footer -->
+</body>
 </html>
